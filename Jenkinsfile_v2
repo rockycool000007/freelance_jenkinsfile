@@ -4,7 +4,7 @@ def remote = [:]
     remote.allowAnyHosts = true
 
     node {
-        withCredentials([sshUserPrivateKey(credentialsId: 'sshUser', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        withCredentials([usernamePassword(credentialsId: 'sshUser', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             remote.user = USERNAME
             remote.password = PASSWORD
             stage("SSH Steps Rocks!") {
