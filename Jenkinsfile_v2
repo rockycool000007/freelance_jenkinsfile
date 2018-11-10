@@ -1,6 +1,6 @@
 def remote = [:]
     remote.name = "node-1"
-    remote.host = "158.69.201.85"
+    remote.host = "<HOST IP>"
     remote.allowAnyHosts = true
 
     node {
