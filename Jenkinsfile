@@ -13,7 +13,9 @@ def remote = [:]
                 sshPut remote: remote, from: 'abc.sh', into: '.'
                 sshGet remote: remote, from: 'abc.sh', into: 'bac.sh', override: true
                 sshScript remote: remote, script: 'abc.sh'
-                sshRemove remote: remote, path: 'abc.sh'
+                sh 'pwd'
+                sh 'ls -al'
+
             }
         }
 }
