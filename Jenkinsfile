@@ -7,7 +7,7 @@ pipeline {
         stage("") {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'sshUser', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh 'ssh $USERNAME:$PASSWORD@158.69.201.85'
+                    sh 'ssh -o StrictHostKeyChecking=no $USERNAME:$PASSWORD@158.69.201.85'
                 }
             }
         }
