@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        creds = ''
+    }
     stages {
         stage("") {
             steps {
