@@ -1,10 +1,10 @@
 def remote = [:]
     remote.name = "node-1"
-    remote.host = "<HOST IP>"
+    remote.host = "10.0.0.53"
     remote.allowAnyHosts = true
 
     node {
-        withCredentials([usernamePassword(credentialsId: 'sshUser', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        withCredentials([usernamePassword(credentialsId: 'ej', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             remote.user = USERNAME
             remote.password = PASSWORD
             stage("SSH Steps Rocks!") {
